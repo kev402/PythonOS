@@ -1,0 +1,16 @@
+{
+    "os.system": "Permite la inyección de comandos en inputs.",
+    "eval(": "Ejecuta código dinámico que puede ser peligroso.",
+    "exec(": "Ejecuta código arbitrario.",
+    "pickle.loads(": "Puede ejecutar código malicioso si los datos son manipulados.",
+    "socket.socket(": "Abre una conexión de red, que puede llevar a ReverseShell.",
+    "socket.accept(": "Puede aceptar conexiones, dando acceso remoto a atacantes.",
+    "socket.listen(": "Hace escucha de cualquier conexión posible.",
+    "ftplib.FTP(": "Puede transferir archivos sin cifrado, exponiendo credenciales.",
+    "compile(": "Convierte texto en código ejecutable.",
+    "marshal.loads(": "Similar a pickle, puede ejecutar código peligroso.",
+    "shutil.rmtree(": "Elimina directorios y todo su contenido sin confirmación.",
+    "os.remove(": "Borra archivos sin posibilidad de recuperación.",
+    "open(": "Si se usa mal, puede modificar archivos críticos.",
+    "shell=True": "Si no se maneja bien, puede dar lugar a inyección de comandos."
+}
