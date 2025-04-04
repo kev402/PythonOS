@@ -34,18 +34,22 @@ while True:
         "su": pysu.ejecutar_bat,
         "vulncode": scan.escanear
     }
-
-    comando = input((f"""┌──[{pyos_dir}]
+    try:
+        comando = input((f"""┌──[{pyos_dir}]
 └─$ """))  # Banner con ruta actual para el usuario
-
-    for com, func in comandos.items():
-        if comando.strip().lower() == com:
-            func() # busca posibles entradas coincidentes en el diccionario comandos
-            break # rompe cuando encuentre una coincidencia
-    if comando.strip() == "python":
-        sp.run(["python"]) # inicia python del sistema
-    elif comando.strip() == "shutdown":
-        print("PythonOS está siendo apagado...")
+        for com, func in comandos.items():
+            if comando.strip().lower() == com:
+                func() # busca posibles entradas coincidentes en el diccionario comandos
+                break # rompe cuando encuentre una coincidencia
+        if comando.strip() == "python":
+            sp.run(["python"]) # inicia python del sistema
+        elif comando.strip() == "shutdown":
+            print("PythonOS está siendo apagado...")
+            break
+        elif all(comando.strip().lower() != c for c in comandos):
+            sp.run(["python", f"C:/PythonOS/apps/{comando}.py"]) # si no coincide ningún comando se intenta ejecutar como una app
+    except KeyboardInterrupt:
+        print("\nPythonOS está siendo apagado...")
         break
-    elif all(comando.strip().lower() != c for c in comandos):
-        sp.run(["python", f"C:/PythonOS/apps/{comando}.py"]) # si no coincide ningún comando se intenta ejecutar como una app
+    except Exception as e:
+        print(f"\nError inesperado: {e}")
