@@ -37,5 +37,5 @@ def boot():
         os.remove("script.py")
         print("Instalado correctamente...")
     verificar("psutil")
-    verificar("webview")
+    verificar("pywebview")
     verificar("customtkinter")
