@@ -1,7 +1,7 @@
 '''PythonOS - bajo la licencia AGPLv3 - por kev402 en https://github.com/kev402/ y https://gitlab.com/kev402/
 Versión únicamente usable en Windows, la versión Linux estará disponible pronto.
 Para entender la licencia AGPLv3, visite https://www.gnu.org/licenses/agpl.html o vea el archivo LICENSE.
-Si necesita documentación vaya a https://kev402.github.io/PythonOS/
+Si necesita documentación vaya a https://kev402.github.io/pythonos-site/
 '''
 
 from system import pyls, ap, boot, pycd, pycat, server, pyrm, help, portfile, pysu, scan # importamos las apps del sistema
