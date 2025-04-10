@@ -3,4 +3,4 @@ def mensaje():
 HELP DE PYTHONOS 
 Si presenta errores o no sabe como empezar ingrese a https://kev402.github.io/pythonos-site/docs.html 
 Ahí encontrará las guías más importantes para el uso de PythonOS. Si no encuentra el artículo que de solución a su problema, busque en sitios de terceros. 
-Si desea actualizar intente hacer git pull.
+Si desea actualizar intente hacer git pull."""
